@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply overflow-x-hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.demo-modal__overlay {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.demo-modal__overlay {
+  @apply fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-4 py-6;
+}
+
+.demo-modal__content {
+  @apply relative w-full max-w-[900px] rounded-2xl bg-white shadow-2xl;
+}
+
+.demo-modal__video {
+  @apply relative w-full overflow-hidden rounded-2xl;
+  padding-top: 56.25%;
+}
+
+.demo-modal__video iframe {
+  @apply absolute inset-0 h-full w-full;
+}
+
+.demo-modal__close {
+  @apply absolute -top-4 -right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-3xl leading-none text-gray-700 shadow-lg transition hover:text-gray-900;
+}
+
+@media (max-width: 640px) {
+  .demo-modal__content {
+    @apply max-w-full rounded-xl;
+  }
+
+  .demo-modal__close {
+    @apply -top-3 -right-3 h-12 w-12 text-3xl;
+  }
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+}
