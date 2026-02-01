@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const STORAGE_KEY = 'promo_60off_state_v1';
+const SESSION_KEY = 'promo_60off_session_v1';
 const DELAY_MS = 10000;
 
 const getState = () => {
@@ -22,6 +23,22 @@ const setState = (patch) => {
   return next;
 };
 
+const getSessionFlag = () => {
+  try {
+    return sessionStorage.getItem(SESSION_KEY);
+  } catch (error) {
+    return null;
+  }
+};
+
+const setSessionFlag = () => {
+  try {
+    sessionStorage.setItem(SESSION_KEY, '1');
+  } catch (error) {
+    // noop
+  }
+};
+
 export default function PromoPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [isMiniVisible, setIsMiniVisible] = useState(false);
@@ -32,6 +49,7 @@ export default function PromoPopup() {
   const showModal = () => {
     setIsVisible(true);
     setIsMiniVisible(false);
+    setSessionFlag();
     setState({ shown: true, minimized: false });
   };
 
@@ -45,7 +63,7 @@ export default function PromoPopup() {
     const state = getState();
     if (state.dismissed) return;
 
-    if (state.minimized) {
+    if (state.minimized && getSessionFlag()) {
       setIsMiniVisible(true);
       return;
     }
