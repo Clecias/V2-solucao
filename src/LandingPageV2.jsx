@@ -5,6 +5,7 @@ import VideoTestimonialsSection from './components/landing/VideoTestimonialsSect
 import IntegrationsSection from './components/landing/IntegrationsSection';
 import FaqSection from './components/landing/FaqSection';
 import Header from './components/landing/Header';
+import PromoPopup from './components/landing/PromoPopup';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
@@ -69,6 +70,7 @@ export default function LandingPageV2() {
   return (
     <div className="min-h-screen bg-white pt-16">
       <Header />
+      <PromoPopup />
       {/* Hero */}
       <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
