@@ -23,14 +23,6 @@ const setState = (patch) => {
   return next;
 };
 
-const getSessionFlag = () => {
-  try {
-    return sessionStorage.getItem(SESSION_KEY);
-  } catch (error) {
-    return null;
-  }
-};
-
 const setSessionFlag = () => {
   try {
     sessionStorage.setItem(SESSION_KEY, '1');
@@ -62,11 +54,6 @@ export default function PromoPopup() {
   useEffect(() => {
     const state = getState();
     if (state.dismissed) return;
-
-    if (state.minimized && getSessionFlag()) {
-      setIsMiniVisible(true);
-      return;
-    }
 
     timeoutRef.current = setTimeout(showModal, DELAY_MS);
 
