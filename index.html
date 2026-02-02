@@ -202,7 +202,7 @@
         const copyBtn = document.getElementById('promo-copy');
         const codeEl = document.getElementById('promo-code');
 
-        const STORAGE_KEY = 'promo_60off_state_v1';
+        const STORAGE_KEY = 'promo_60off_state_v2';
         const DELAY_MS = 10000;
 
         function getState() {
@@ -232,8 +232,6 @@
         }
 
         function schedulePopup() {
-          const state = getState();
-          if (state.dismissed) return;
           setTimeout(showModal, DELAY_MS);
         }
 
