@@ -22,7 +22,7 @@ npm run preview
 
 O deploy é feito automaticamente via GitHub Actions quando há push na branch `main`.
 
-1. Garanta que o repositório esteja com GitHub Pages configurado para **GitHub Actions**.
+1. Garanta que o repositório esteja com GitHub Pages configurado p/ **GitHub Actions**.
 2. Atualize o `base` no `vite.config.js` se o nome do repositório mudar.
 3. Faça push na branch `main` e aguarde o workflow `Deploy to GitHub Pages` finalizar.
 
