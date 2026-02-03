@@ -1,4 +1,4 @@
-# Landing Page V2 - Foco em Resultados
+# V2-solucao
 
 Landing page criada com Vite + React + Tailwind CSS, pronta para deploy no GitHub Pages.
 
@@ -29,5 +29,5 @@ O deploy é feito automaticamente via GitHub Actions quando há push na branch `
 A página ficará disponível em:
 
 ```
-https://<seu-usuario>.github.io/Landing-Page-V2---Foco-em-Resultados-Artefato-interativo/
+https://<seu-usuario>.github.io/V2-solucao/
 ```
