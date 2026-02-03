@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const STORAGE_KEY = 'promo_60off_state_v1';
+const STORAGE_KEY = 'promo_60off_state_v2';
 const DELAY_MS = 10000;
 
 const getState = () => {
@@ -43,11 +43,8 @@ export default function PromoPopup() {
 
   useEffect(() => {
     const state = getState();
-    if (state.dismissed) return;
-
     if (state.minimized) {
       setIsMiniVisible(true);
-      return;
     }
 
     timeoutRef.current = setTimeout(showModal, DELAY_MS);
