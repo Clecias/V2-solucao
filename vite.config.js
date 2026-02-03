@@ -21,5 +21,5 @@ export default defineConfig({
   },
   base: process.env.VERCEL
     ? '/'
-    : '/Landing-Page-V2---Foco-em-Resultados-Artefato-interativo/',
+    : '/V2-solucao/',
 });
