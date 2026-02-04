@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page V2</title>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "dyc6z7j97u");
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '806797819085009');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <style>
+      #promo-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        padding: 16px;
+      }
+
+      #promo-modal {
+        width: 100%;
+        max-width: 520px;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        position: relative;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+
+      #promo-header {
+        padding: 18px 18px 10px 18px;
+      }
+
+      #promo-title {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      #promo-subtitle {
+        margin: 8px 0 0 0;
+        font-size: 14px;
+        color: #444;
+      }
+
+      #promo-body {
+        padding: 0 18px 18px 18px;
+      }
+
+      #promo-coupon {
+        margin-top: 14px;
+        padding: 12px;
+        border-radius: 12px;
+        background: #f6f7f8;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      #promo-code {
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 16px;
+        -webkit-user-select: all;
+           -moz-user-select: all;
+                user-select: all;
+      }
+
+      .promo-btn {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 14px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 14px;
+        background: #2472b3;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #promo-cta {
+        width: 100%;
+        margin-top: 14px;
+        padding: 14px;
+        font-size: 15px;
+      }
+
+      #promo-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 0;
+        background: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 8px;
+        color: #222;
+      }
+
+      #promo-mini {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 99998;
+        display: none;
+      }
+
+      #promo-mini button {
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 14px;
+        cursor: pointer;
+        font-weight: 800;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: #1b1464;
+        color: #fff;
+      }
+
+      @media (max-width: 420px) {
+        #promo-title { font-size: 18px; }
+        #promo-cta { font-size: 14px; }
+      }
+    </style>
+    <script type="module" crossorigin src="/V2-solucao/assets/index-B2pV2468.js"></script>
+    <link rel="stylesheet" crossorigin href="/V2-solucao/assets/index-Dk5H7NY1.css">
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=806797819085009&ev=PageView&noscript=1"
+    /></noscript>
+    <div id="root"></div>
+    <div id="promo-overlay" aria-hidden="true">
+      <div id="promo-modal" role="dialog" aria-modal="true" aria-labelledby="promo-title">
+        <button id="promo-close" aria-label="Fechar" type="button">×</button>
+
+        <div id="promo-header">
+          <h2 id="promo-title">3 dias grátis + 60% OFF no 1º mês</h2>
+          <p id="promo-subtitle">Use o cupom abaixo e garanta o desconto agora.</p>
+        </div>
+
+        <div id="promo-body">
+          <div id="promo-coupon">
+            <div>
+              <div style="font-size:12px; color:#666; margin-bottom:4px;">Cupom</div>
+              <div id="promo-code">60OFF</div>
+            </div>
+            <button class="promo-btn" id="promo-copy" type="button">Copiar cupom</button>
+          </div>
+
+          <a
+            id="promo-cta-link"
+            href="https://www.unicodrop.com.br/app/?t=cadastrar&utm_source=popup&utm_campaign=60OFF&utm_id=LPV2"
+            style="text-decoration:none; display:block;"
+          >
+            <span class="promo-btn" id="promo-cta">
+              Criar conta e ativar desconto
+            </span>
+          </a>
+
+          <div style="margin-top:10px; font-size:12px; color:#666;">
+            Você pode fechar e reabrir depois pelo botão no canto inferior direito.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="promo-mini">
+      <button type="button" id="promo-mini-btn">Desconto 60%</button>
+    </div>
+    <script>
+      (function () {
+        const overlay = document.getElementById('promo-overlay');
+        const closeBtn = document.getElementById('promo-close');
+        const mini = document.getElementById('promo-mini');
+        const miniBtn = document.getElementById('promo-mini-btn');
+        const copyBtn = document.getElementById('promo-copy');
+        const codeEl = document.getElementById('promo-code');
+
+        const STORAGE_KEY = 'promo_60off_state_v2';
+        const DELAY_MS = 10000;
+
+        function getState() {
+          try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+          catch (error) { return {}; }
+        }
+
+        function setState(patch) {
+          const current = getState();
+          const next = Object.assign({}, current, patch);
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); } catch (error) {}
+          return next;
+        }
+
+        function showModal() {
+          overlay.style.display = 'flex';
+          overlay.setAttribute('aria-hidden', 'false');
+          mini.style.display = 'none';
+          setState({ shown: true, minimized: false });
+        }
+
+        function hideModalToMini() {
+          overlay.style.display = 'none';
+          overlay.setAttribute('aria-hidden', 'true');
+          mini.style.display = 'block';
+          setState({ minimized: true });
+        }
+
+        function schedulePopup() {
+          setTimeout(showModal, DELAY_MS);
+        }
+
+        closeBtn.addEventListener('click', hideModalToMini);
+        miniBtn.addEventListener('click', showModal);
+
+        overlay.addEventListener('click', function (event) {
+          if (event.target === overlay) hideModalToMini();
+        });
+
+        copyBtn.addEventListener('click', async function () {
+          const code = (codeEl.textContent || '').trim();
+          if (!code) return;
+          try {
+            await navigator.clipboard.writeText(code);
+            copyBtn.textContent = 'Copiado!';
+            setTimeout(() => { copyBtn.textContent = 'Copiar cupom'; }, 1200);
+          } catch (error) {
+            const range = document.createRange();
+            range.selectNode(codeEl);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            copyBtn.textContent = 'Selecione e copie';
+            setTimeout(() => { copyBtn.textContent = 'Copiar cupom'; }, 1600);
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && overlay.style.display === 'flex') {
+            hideModalToMini();
+          }
+        });
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', schedulePopup);
+        } else {
+          schedulePopup();
+        }
+      })();
+    </script>
+  </body>
+</html>
